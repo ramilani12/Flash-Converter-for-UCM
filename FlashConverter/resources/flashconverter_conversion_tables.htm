@@ -1,0 +1,94 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+FlashConverter staticResTable
+</title>
+</head>
+<body>
+
+
+
+<@table FlashConverter_DocumentConversions@>
+<table border=1>
+<tr>
+	<td>drConversion</td>
+	<td>drSteps</td>
+	<td>drDescription</td>
+	<td>drIsEnabledFlag</td>
+</tr>
+<tr>
+	<td>Flash Media</td>
+	<td>FlashRenditions</td>
+	<td>csConversionDescriptionFlash</td>
+	<td>TRUE</td>
+</tr>
+</table>
+<@end@>
+
+
+<@table FlashConverter_ConversionSteps@>
+<table border=1>
+<tr>
+	<td>drStep</td>
+	<td>drStepType</td>
+	<td>drStepAction</td>
+	<td>drStepParameters</td>
+	<td>drStepTimeoutName</td>
+	<td>drStepReport</td>
+	<td>drStepControlCodes</td>
+	<td>drStepDescription</td>
+	<td>drStepIsEnabled</td>
+</tr>
+<tr>
+	<td>FlashRenditions</td>
+	<td>Code</td>
+	<td>com.contentoncontentmanagement.refinery.jobs.FlashConverter</td>
+	<td></td>
+	<td>10</td>
+	<td>!$Create Video Renditions</td>
+	<td>onErrorFail, producesRequiredWebviewable</td>
+	<td>!$Create a set of thumbnails and movie files</td>
+	<td>TRUE</td>
+</tr>
+</table>
+<@end@>
+
+<@table FlashConverter_TimeOutSettings@>
+<table border=1>
+<tr>
+	<td>toName</td>
+	<td>toDescription</td>
+	<td>toMin</td>
+	<td>toMax</td>
+	<td>toFactor</td>
+</tr>
+<tr>
+	<td>FlashConverterTimeOut</td>
+	<td>csFlashConverterTimeoutDesc</td>
+	<td>15</td>
+	<td>60</td>
+	<td>3</td>
+</tr>
+</table>
+<@end@>
+
+
+
+<@table FlashConverter_RefAddons@>
+<table border=1>
+<tr>
+	<td>raName</td>
+	<td>raDisplayName</td>
+	<td>raVersion</td>
+	<td>raRequiredFeatures</td>
+</tr>
+<tr>	
+	<td>FlashConverte</td>
+	<td>csFlashConversionsLabel</td>
+	<td>1.0</td>
+	<td><$raHasRequiredFeature=1$></td>
+</tr>
+</table>
+<@end@>
+</body></html>
