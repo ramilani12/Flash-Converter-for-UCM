@@ -1,0 +1,37 @@
+﻿	<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+FlashConverterSupport htmlIncludeOrString
+</title>
+</head>
+<body>
+
+<@dynamichtml std_docinfo_links@>
+	<$if FlashMediaSupportEnabled like "true"$>
+		<$if dWebExtension like "flv"$>
+			<div class="xuiSubheading"><$lc("wwFlashStreamingView")$></div>
+			<table class="xuiTable" cellpadding="2" cellspacing="0">
+				<tr>
+				<td align="center">
+				<embed 
+					src="<$HttpRelativeWebRoot$>resources/flashstreaming/mediaplayer.swf" 
+					width="<$FlashPlayerWidth$>"
+					height="<$FlashPlayerHeight$>"
+					allowfullscreen="true"
+					autostart="true"
+					flashvars="file=<$FlashMediaUrlRoot$>&id=<$dDocName$>~<$dRevLabel$>"
+					autostart="true"
+				/>
+				</td>
+				</tr>
+			</table>
+		<$endif$>
+	<$endif$>
+	<$include super.std_docinfo_links$>
+<@end@>
+
+</body></html>
+
+
+
